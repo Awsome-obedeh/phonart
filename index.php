@@ -56,6 +56,24 @@
                   
                    
                 <p>  }</p>
+        <h2>/api/call</h2>
+
+        
+          <p>  {  </p>
+              <p>  method:'post',</p> 
+
+              <p>  payload:{</p>
+
+                <div style='margin-left:15px'>
+                   
+                   <p> number:'12345',</p>
+                   
+                
+                </div>
+                   
+                  
+                   
+                <p>  }</p>
         
       
 

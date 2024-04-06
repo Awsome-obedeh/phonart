@@ -23,6 +23,6 @@ function jwt_payload($number,$id){
 
 $jwt=JWT::encode(jwt_payload(2,88762), $secret_key,'HS256' );
 
-echo $jwt;
+// echo $jwt,$secret_key;
 
 
