@@ -6,11 +6,11 @@ cors();
 
 $edata=file_get_contents("php://input");
 $data=json_decode($edata,true);
+
 $name=$data['name'];
 $number=$data['number'];
 $password=$data['password'];
 
-if($name!='' && $number !='' && $password !=''){
 
     $insert_sql="INSERT INTO numbers(phone,name,password)
     VALUES('$number','$name','$password')";
@@ -24,11 +24,7 @@ if($name!='' && $number !='' && $password !=''){
         echo json_encode(array("status"=>500, "msg"=>"server error"));
         // echo mysqli_error($conn);
     }
-}
 
-else{
-    echo json_encode(array("status"=>400, "msg"=>"Missin user inputs"));
-}
 
 
 
