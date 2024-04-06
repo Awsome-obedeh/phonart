@@ -9,4 +9,10 @@
         
     }
 
+    function jwtSecret(){
+        return [
+            'jwt_secret'=> 'Awsome'
+        ];
+    }
+
 ?>
