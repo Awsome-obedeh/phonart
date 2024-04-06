@@ -47,9 +47,9 @@ function jwt_payload($number,$id){
                 
                
                 $id=$users['id'];
-                $number=$users=['number'];
+                $number=$users['phone'];
                 $jwt=JWT::encode(jwt_payload($number,$id), $secret_key,'HS256' );
-                echo json_encode(array("status"=>"200","msg"=>"user logged in successfully", "token"=>$jwt));
+                echo json_encode(array("status"=>"200","msg"=>"user logged in successfully", "token"=>$jwt,'num'=> $number));
             }
     
     
