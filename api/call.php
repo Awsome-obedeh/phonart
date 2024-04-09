@@ -2,6 +2,7 @@
 require "config.php";
 require "dbconnect.php";
 require __DIR__ . '/vendor/autoload.php';
+cors();
 
 // get php post inputs
 $edata = file_get_contents("php://input");
