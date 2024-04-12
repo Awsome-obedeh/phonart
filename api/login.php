@@ -2,7 +2,7 @@
     require __DIR__ . '/vendor/autoload.php';
     require "config.php";
     require "dbconnect.php";
-
+    cors();
     // jwt
 
 
