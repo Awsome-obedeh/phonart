@@ -24,7 +24,7 @@ $headers = apache_request_headers();
 if (isset($headers['Authorization'])) {
     // get Authorization value
     $authorizationHeader = $headers['Authorization'];
-    print_r($authorizationHeader);
+    // print_r($authorizationHeader);
 
     // get token from header
     $headerValue = explode(' ', $authorizationHeader);
@@ -33,7 +33,7 @@ if (isset($headers['Authorization'])) {
     try {
         // sign jwt
         $decodedJwt = JWT::decode($headertoken, new Key($secret_key, 'HS256'));
-        print_r($decodedJwt);
+        // print_r($decodedJwt);
         $caller_id = $decodedJwt->iss;
         $caller_number = $decodedJwt->number;
      
