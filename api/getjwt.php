@@ -14,7 +14,6 @@ function jwt_payload($number,$id){
     $payload=array(
         'iss'=> $id,
         'iat'=>time(),
-        'exp'=>strtotime('+2 days'),
         'number'=>$number
 
     );
