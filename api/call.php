@@ -62,7 +62,7 @@ if (isset($headers['Authorization'])) {
                 "num2" => '08062119957',
                 "mum3" => "0902342952"
             ];
-            echo json_encode(array("staus" => 400, "msg" => "Invalid number ", "allowed numbers" => $allowed_numbers));
+            echo json_encode(array("staus" => 400, "msg" => "Invalid number ", "allowed numbers" => $allowed_numbers,"scam"=>true));
         }
     } catch (Exception $e) {
         echo "Err:" . $e->getMessage();
