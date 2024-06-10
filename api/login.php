@@ -42,7 +42,7 @@ function jwt_payload($number,$id){
             $login_sql="SELECT * FROM numbers WHERE phone='$number' && password='$password'";
             $login_query=mysqli_query($conn,$login_sql);
     
-            if($login_query && mysqli_num_rows($login_query)>0){
+            if($login_query && mysqli_num_rows($login_query)>0){     
                 $users=mysqli_fetch_assoc($login_query);
                 
                
@@ -54,8 +54,8 @@ function jwt_payload($number,$id){
     
     
             else{
-                echo json_encode((array("status"=>400, "msg"=>"Invalid Credentials")));
-                // echo mysqli_error($conn);
+                echo json_encode((array("status"=>400, "msg"=>$number)));
+                echo mysqli_error($conn);
             };
      
 
