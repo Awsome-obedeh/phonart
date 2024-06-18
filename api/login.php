@@ -48,13 +48,14 @@ function jwt_payload($number,$id){
                
                 $id=$users['id'];
                 $number=$users['phone'];
+                $username=$users['name'];
                 $jwt=JWT::encode(jwt_payload($number,$id), $secret_key,'HS256' );
-                echo json_encode(array("status"=>200,"msg"=>"user logged in successfully", "token"=>$jwt));
+                echo json_encode(array("status"=>200,"msg"=>"user logged in successfully", "username"=>$username,"token"=>$jwt ));
             }
     
     
             else{
-                echo json_encode((array("status"=>400, "msg"=>$number)));
+                echo json_encode((array("status"=>400, "msg"=>"Invalid login")));
                 echo mysqli_error($conn);
             };
      
